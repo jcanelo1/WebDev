@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dunder Mifflin Paper Company</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <img src="dundermifflin_picture.jpeg" width="300" height="200" class="Logo">
+        <h1>Dunder Mifflin Inc.</h1>
+
+        <p id="userGreeting" style="font-weight: bold; margin: 10px 0;"></p>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Services</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Looking for Paper? </h2>
+        <p>Here at Dunder Mifflin we have the best Salesman selling the best paper needed!</p>
+        <button onclick="window.location.href='InquireForm.html'">inquire Here!</button>
+    </section>
+
+    <section class="services">
+        <h2>Our Services</h2>
+        <a href="SalesPage.html" class="register-card-link">
+            <div class="service-box">
+                <h3>Look for a Salesman!</h3>
+                <p>Customer service is what we value most!</p>
+            </div>
+        </a>
+        <a href="RegisterPage.html" class="register-card-link">
+            <div class="service-box">
+                <h3>Register Here!</h3>
+                <p>Sign up for monthly promotions and newsletter deals!</p>
+            </div>
+        </a>
+        <a href="#" class="register-card-link">
+            <div class="service-box">
+                <h3>Have Questions?</h3>
+                <p>Ring our customer service for support!</p>
+            </div>
+        </a>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Dunder Mifflin Inc. All rights reserved.</p>
+    </footer>
+
+    <script>
+        fetch('session.php')
+          .then(response => response.json())
+          .then(data => {
+            const greeting = document.getElementById('userGreeting');
+            if (data.fullname) {
+              greeting.textContent = `Welcome, ${data.fullname} (${data.email})`;
+            } else {
+              greeting.textContent = '';
+            }
+          })
+          .catch(() => {
+            document.getElementById('userGreeting').textContent = '';
+          });
+      </script>
+
+</body>
+</html>
