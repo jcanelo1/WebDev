@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <form action="register.php" method="post">
+        <div class="container">
+          <h1>Register</h1>
+          <p>Please fill in this form to create an account.</p>
+          <hr>
+
+          <label for="Full Name"><b>Full Name</b></label>
+          <input type="text" placeholder="Enter Full Name" name="fullname" id="fullname" required>
+      
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="email" id="email" required>
+      
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+      
+          <label for="psw-repeat"><b>Repeat Password</b></label>
+          <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+          <hr>
+      
+          <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+          <button type="submit" class="registerbtn">Register</button>
+        </div>
+      
+        <div class="container signin">
+          <p>Already have an account? <a href="LoginPage.html">Sign in</a>.</p>
+        </div>
+      </form>
+
+      <p id="responsemessage" style="text-align: center; margin-top: 10px;"></p>
+
+      <script>
+        document.getElementById("registerForm").addEventListener("submit", function(e) {
+          e.preventDefault();
+    
+          const name = document.getElementById("fullname").value.trim();
+          const email = document.getElementById("email").value.trim();
+          const password = document.getElementById("psw").value;
+          const repeatPassword = document.getElementById("psw-repeat").value;
+    
+          if (password !== repeatPassword) {
+            document.getElementById("responseMessage").textContent = "Passwords do not match.";
+            return;
+          }
+    
+          const data = {
+             name: name,
+              email: email,
+              password: password
+            };
+    
+          fetch('register.php', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+          })
+          .then(res => res.json())
+          .then(data => {
+            document.getElementById("responseMessage").textContent = data.response.message;
+          })
+          .catch(err => {
+            console.error('Error:', err);
+            document.getElementById("responseMessage").textContent = "An error occurred.";
+          });
+        });
+      </script>
+    
+</body>
+</html>
