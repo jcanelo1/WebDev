@@ -1,0 +1,212 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #0e4fdc;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+header nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Hero section */
+.hero {
+    background-color: #f2f2f2;
+    padding: 50px;
+    text-align: center;
+}
+
+.hero h2 {
+    margin-bottom: 10px;
+}
+
+.hero p {
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #0e4fdc;
+    color: white;
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #080808;
+}
+
+/* Services section */
+.services {
+    padding: 40px;
+    text-align: center;
+}
+
+.service-box {
+    background-color: #e7e7e7;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+.service-box h3 {
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit/register button */
+.registerbtn {
+  background-color: #0e4fdc;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity:1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+.contact {
+  padding: 40px;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.contact-form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form .btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #004080;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form .btn:hover {
+  background-color: #0066cc;
+}
+
+button{
+  background-color: #0e4fdc;
+  color: white;
+  padding: 10px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+  transform: scale(1.05);
+}
+
+
+.services {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.register-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  margin-bottom: 20px; 
+}
+
+.service-box {
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.register-card-link:hover .service-box {
+  transform: scale(1.05);
+  background-color: #e0f7fa;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
