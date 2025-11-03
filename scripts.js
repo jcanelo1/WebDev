@@ -1,5 +1,5 @@
 
-            // The same logic you used in Node
+            // Unique input names
     function greet(name) {
       const returningUsers = ["Jair", "Maria"];
       return returningUsers.includes(name)
