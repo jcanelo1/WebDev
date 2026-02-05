@@ -37,7 +37,7 @@
           const quotes = [
             "Limitless paper in a paperless world.",
             "Paper is like oxygen for businesses.",
-            "We don't sell paper. We well possibilities.",
+            "We don't sell paper. We sell possibilities.",
             "I am Beyonce, always!",
             "It's Bittany bitch."
           ];
